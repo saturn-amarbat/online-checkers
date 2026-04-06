@@ -1,0 +1,17 @@
+# Maven build output
+**/target/
+
+# IDE metadata
+.idea/
+.vscode/
+*.iml
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Windows zone identifier artifacts from downloads
+*.Zone.Identifier
+
+# Logs
+*.log
