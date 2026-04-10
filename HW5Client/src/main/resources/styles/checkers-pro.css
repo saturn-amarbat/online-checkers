@@ -1,0 +1,279 @@
+.root {
+  -fx-font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  -fx-text-fill: #f4f1e8;
+}
+
+.screen-root {
+  -fx-background-color: linear-gradient(to bottom right, #1c222f, #101521);
+  -fx-padding: 18;
+}
+
+.welcome-root {
+  -fx-background-color: radial-gradient(
+    center 45% 35%,
+    radius 85%,
+    #2b3650 0%,
+    #151a28 65%,
+    #0e1018 100%
+  );
+}
+
+.login-root {
+  -fx-background-color: radial-gradient(
+    center 50% 25%,
+    radius 95%,
+    #253349 0%,
+    #141a2a 72%,
+    #0c111a 100%
+  );
+}
+
+.lobby-root {
+  -fx-background-color: linear-gradient(to bottom, #161d2b, #0d131e);
+}
+
+.arena-root {
+  -fx-background-color: linear-gradient(to bottom, #141a25, #0c1018);
+}
+
+.game-over-root {
+  -fx-background-color: radial-gradient(
+    center 50% 40%,
+    radius 90%,
+    #27364d 0%,
+    #111722 70%,
+    #090d15 100%
+  );
+}
+
+.title-hero {
+  -fx-font-size: 58;
+  -fx-font-weight: 900;
+  -fx-letter-spacing: 2px;
+  -fx-text-fill: #f8f6ef;
+}
+
+.subtitle-muted {
+  -fx-font-size: 16;
+  -fx-text-fill: #bdd1ef;
+}
+
+.screen-heading {
+  -fx-font-size: 30;
+  -fx-font-weight: 800;
+  -fx-text-fill: #f7f4ec;
+}
+
+.panel-title {
+  -fx-font-size: 16;
+  -fx-font-weight: 700;
+  -fx-text-fill: #f5efe1;
+}
+
+.profile-name {
+  -fx-font-size: 20;
+  -fx-font-weight: 800;
+  -fx-text-fill: #fff0c7;
+}
+
+.status-line {
+  -fx-font-size: 12;
+  -fx-text-fill: #95a7c7;
+}
+
+.placeholder-text {
+  -fx-text-fill: #a8b8d3;
+  -fx-font-size: 15;
+}
+
+.card-panel {
+  -fx-background-color: rgba(21, 31, 48, 0.84);
+  -fx-border-color: rgba(206, 176, 120, 0.38);
+  -fx-border-radius: 14;
+  -fx-background-radius: 14;
+  -fx-padding: 14;
+}
+
+.preview-panel {
+  -fx-background-color: linear-gradient(to bottom right, #1c293e, #111a2b);
+  -fx-border-color: rgba(216, 189, 142, 0.45);
+  -fx-border-style: segments(4, 6);
+  -fx-border-width: 2;
+  -fx-border-radius: 16;
+  -fx-background-radius: 16;
+}
+
+.logo-placeholder {
+  -fx-background-color: linear-gradient(to right, #2f415e, #1b2437);
+  -fx-border-color: rgba(232, 206, 162, 0.6);
+  -fx-border-style: segments(8, 8);
+  -fx-border-width: 2;
+  -fx-border-radius: 16;
+  -fx-background-radius: 16;
+  -fx-alignment: center;
+}
+
+.modern-input {
+  -fx-background-color: rgba(245, 241, 232, 0.95);
+  -fx-text-fill: #162132;
+  -fx-font-size: 14;
+  -fx-font-weight: 600;
+  -fx-background-radius: 10;
+  -fx-border-radius: 10;
+  -fx-border-color: #9baecf;
+  -fx-padding: 10 12;
+}
+
+.button {
+  -fx-cursor: hand;
+}
+
+.primary-button {
+  -fx-background-color: linear-gradient(to bottom, #d7b16c, #b7863f);
+  -fx-text-fill: #1d1b18;
+  -fx-font-weight: 800;
+  -fx-font-size: 14;
+  -fx-background-radius: 10;
+  -fx-padding: 10 18;
+}
+
+.primary-button:hover {
+  -fx-background-color: linear-gradient(to bottom, #e2c486, #c69850);
+}
+
+.secondary-button {
+  -fx-background-color: linear-gradient(to bottom, #5f769f, #3e5479);
+  -fx-text-fill: #f4f1e7;
+  -fx-font-weight: 700;
+  -fx-font-size: 13;
+  -fx-background-radius: 10;
+  -fx-padding: 9 14;
+}
+
+.secondary-button:hover {
+  -fx-background-color: linear-gradient(to bottom, #6f88b4, #4b638d);
+}
+
+.cta-button {
+  -fx-background-color: linear-gradient(to bottom right, #f2c062, #c98f35);
+  -fx-text-fill: #17130f;
+  -fx-font-size: 18;
+  -fx-font-weight: 900;
+  -fx-background-radius: 14;
+  -fx-padding: 14 28;
+}
+
+.cta-button:hover {
+  -fx-background-color: linear-gradient(to bottom right, #f5cf87, #d39f4a);
+}
+
+.arrow-button {
+  -fx-min-width: 42;
+  -fx-min-height: 42;
+  -fx-background-color: linear-gradient(to bottom, #3f5b87, #2b4366);
+  -fx-text-fill: #f2eee2;
+  -fx-font-size: 16;
+  -fx-font-weight: 700;
+  -fx-background-radius: 100;
+}
+
+.skin-label {
+  -fx-font-size: 15;
+  -fx-text-fill: #d8e4fb;
+  -fx-font-weight: 600;
+}
+
+.list-view {
+  -fx-background-color: rgba(248, 244, 233, 0.95);
+  -fx-border-color: #9caecc;
+  -fx-border-radius: 8;
+  -fx-background-radius: 8;
+}
+
+.list-cell {
+  -fx-background-color: transparent;
+  -fx-text-fill: #162030;
+  -fx-font-weight: 600;
+}
+
+.list-cell:filled:selected {
+  -fx-background-color: linear-gradient(to right, #d8b46e, #be8f4a);
+  -fx-text-fill: #1b1713;
+}
+
+.text-area {
+  -fx-control-inner-background: rgba(245, 241, 231, 0.95);
+  -fx-text-fill: #1a2435;
+  -fx-font-size: 13;
+  -fx-border-color: #9caecc;
+  -fx-border-radius: 8;
+  -fx-background-radius: 8;
+}
+
+.timer-value {
+  -fx-font-size: 30;
+  -fx-font-weight: 900;
+  -fx-text-fill: #f7d79a;
+}
+
+.board-shell {
+  -fx-background-color: rgba(20, 24, 32, 0.82);
+  -fx-padding: 14;
+  -fx-background-radius: 14;
+  -fx-border-radius: 14;
+  -fx-border-color: rgba(212, 181, 125, 0.45);
+}
+
+.board-grid {
+  -fx-padding: 6;
+  -fx-background-color: #1b1f2b;
+  -fx-background-radius: 6;
+}
+
+.board-square {
+  -fx-font-size: 22;
+  -fx-font-weight: 900;
+  -fx-text-fill: #191715;
+  -fx-background-radius: 0;
+  -fx-padding: 0;
+}
+
+.square-light {
+  -fx-background-color: #e6d3b2;
+}
+
+.square-dark {
+  -fx-background-color: #6f4e37;
+}
+
+.square-selected {
+  -fx-border-color: #ffd66e;
+  -fx-border-width: 3;
+}
+
+.game-over-winner {
+  -fx-font-size: 42;
+  -fx-font-weight: 900;
+  -fx-text-fill: #f8de9f;
+}
+
+.versus-line {
+  -fx-font-size: 20;
+  -fx-font-weight: 700;
+  -fx-text-fill: #d4e0f6;
+}
+
+.avatar-placeholder {
+  -fx-pref-width: 130;
+  -fx-pref-height: 130;
+  -fx-background-color: linear-gradient(to bottom right, #3b4f6f, #293951);
+  -fx-border-color: rgba(221, 194, 146, 0.55);
+  -fx-border-radius: 12;
+  -fx-background-radius: 12;
+}
+
+.versus-badge {
+  -fx-font-size: 32;
+  -fx-font-weight: 900;
+  -fx-text-fill: #f5c976;
+}

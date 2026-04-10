@@ -1,0 +1,53 @@
+@import "checkers-pro.css";
+
+.top-bar {
+  -fx-padding: 2 0 4 0;
+}
+
+.back-button {
+  -fx-background-color: linear-gradient(to bottom, #d8b46e, #b7863f);
+  -fx-text-fill: #1a1712;
+  -fx-font-size: 13;
+  -fx-font-weight: 800;
+  -fx-background-radius: 10;
+  -fx-padding: 8 14;
+}
+
+.back-button:hover {
+  -fx-background-color: linear-gradient(to bottom, #e4c88f, #c69850);
+}
+
+.accessibility-toggle {
+  -fx-text-fill: #f0e6cf;
+  -fx-font-size: 13;
+  -fx-font-weight: 700;
+}
+
+.accessibility-mode {
+  -fx-font-size: 16px;
+}
+
+.accessibility-mode .title-hero {
+  -fx-font-size: 66;
+}
+
+.accessibility-mode .screen-heading {
+  -fx-font-size: 34;
+}
+
+.accessibility-mode .panel-title {
+  -fx-font-size: 20;
+}
+
+.accessibility-mode .timer-value {
+  -fx-font-size: 36;
+}
+
+.accessibility-mode .board-square {
+  -fx-font-size: 28;
+}
+
+.accessibility-mode .status-line {
+  -fx-font-size: 15;
+  -fx-text-fill: #c8dcff;
+}
