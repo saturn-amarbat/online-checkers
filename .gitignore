@@ -15,3 +15,6 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Submission archives
+HW5_submission_*.zip
