@@ -59,3 +59,25 @@ private static final String APP_CSS = "/styles/style.css";
 1. Current stylesheet path: /styles/style.css (imports checkers-pro.css)
 2. Current class has Platform.runLater wrapping for network callbacks.
 3. Keep this playbook updated before major UI refactors.
+
+## Today’s Progress Summary
+
+1. Created and pushed `hw5-pure-submission` as the simplified HW5 release branch.
+2. Removed Project 3-only engine, database, and CSS artifacts from that branch.
+3. Packaged a cleaner HW5 submission zip with build outputs excluded.
+4. Returned the workspace to `main` so Project 3 work can continue separately.
+
+## How To Run HW5
+
+1. Open a terminal in `/home/saturn/hw5.startercode`.
+2. Run `cd HW5Server && mvn clean compile`.
+3. Run `cd ../HW5Client && mvn clean compile`.
+4. To launch the server, run `cd HW5Server && mvn exec:java`.
+5. To launch the client, run `cd ../HW5Client && mvn exec:java`.
+6. Verify the chat flow by logging in with two different usernames and confirming online list updates plus global/private chat routing.
+
+## HW5 Submission Notes
+
+1. Preferred archive for Blackboard: `HW5_submission_hw5-pure-clean.zip`.
+2. That archive excludes `target`, IDE metadata, `.DS_Store`, and Zone Identifier files.
+3. Keep the wireframe image folder out of the submission zip unless your instructor explicitly requests it.
