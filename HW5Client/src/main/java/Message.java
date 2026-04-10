@@ -10,14 +10,7 @@ public class Message implements Serializable {
         LOGIN_FAIL,
         CLIENT_LIST_UPDATE,
         GLOBAL_CHAT,
-        PRIVATE_CHAT,
-        CHALLENGE_REQUEST,
-        CHALLENGE_ACCEPT,
-        CHALLENGE_DECLINE,
-        GAME_START,
-        MOVE_ATTEMPT,
-        GAME_STATE_UPDATE,
-        GAME_OVER
+        PRIVATE_CHAT
     }
 
     public Type type;
@@ -25,13 +18,6 @@ public class Message implements Serializable {
     public ArrayList<String> recipients;
     public String textContent;
     public ArrayList<String> onlineUsers;
-
-    public int[][] boardState;
-    public int fromRow = -1;
-    public int fromCol = -1;
-    public int toRow = -1;
-    public int toCol = -1;
-    public boolean isBlackTurn;
 
     public Message() {
         this.recipients = new ArrayList<>();
