@@ -45,6 +45,7 @@ public class GuiClient extends Application {
 
     private Scene welcomeScene;
     private Scene loginScene;
+    private Scene instructionsScene;
     private Scene lobbyScene;
     private Scene arenaScene;
     private Scene gameOverScene;
@@ -90,6 +91,7 @@ public class GuiClient extends Application {
 
         welcomeScene = buildWelcomeScreen();
         loginScene = buildLoginScreen();
+        instructionsScene = buildInstructionsScreen();
         lobbyScene = buildLobbyScreen();
         arenaScene = buildArenaScreen();
         gameOverScene = buildGameOverScreen("Winner Pending");
@@ -130,7 +132,11 @@ public class GuiClient extends Application {
         startButton.getStyleClass().add("cta-button");
         startButton.setOnAction(e -> primaryStage.setScene(loginScene));
 
-        root.getChildren().addAll(title, subtitle, animationBox, startButton);
+        Button howToPlayButton = new Button("How To Play");
+        howToPlayButton.getStyleClass().add("primary-button");
+        howToPlayButton.setOnAction(e -> primaryStage.setScene(instructionsScene));
+
+        root.getChildren().addAll(title, subtitle, animationBox, startButton, howToPlayButton);
         return createStyledScene(root);
     }
 
@@ -166,6 +172,55 @@ public class GuiClient extends Application {
         loginStatusLabel.getStyleClass().add("status-line");
 
         root.getChildren().addAll(logoBox, heading, hostField, usernameField, connectButton, loginStatusLabel);
+        return createStyledScene(root);
+    }
+
+    private Scene buildInstructionsScreen() {
+        VBox root = new VBox(16);
+        root.getStyleClass().addAll("screen-root", "instructions-root");
+        root.setPadding(new Insets(18));
+
+        Button returnButton = new Button("<- Return");
+        returnButton.getStyleClass().add("back-button");
+        returnButton.setOnAction(e -> {
+            if (username == null || username.isEmpty()) {
+                primaryStage.setScene(welcomeScene);
+            } else {
+                primaryStage.setScene(lobbyScene);
+            }
+        });
+
+        HBox topBar = new HBox(returnButton);
+        topBar.getStyleClass().add("top-bar");
+        topBar.setAlignment(Pos.CENTER_LEFT);
+
+        Label title = new Label("How To Play Checkers");
+        title.getStyleClass().add("screen-heading");
+
+        VBox instructionsList = new VBox(14);
+        instructionsList.setFillWidth(true);
+
+        String[] rules = new String[] {
+            "Pieces move diagonally on dark squares.",
+            "You may move one square forward unless capturing.",
+            "Jumps are mandatory when an opponent piece can be captured.",
+            "A jump captures the opponent piece you leap over.",
+            "Reach the opposite end to become a King and move both directions."
+        };
+
+        for (int i = 0; i < rules.length; i++) {
+            StackPane card = new StackPane();
+            card.getStyleClass().add("instruction-card");
+            card.setPrefHeight(86);
+
+            Label ruleText = new Label(rules[i]);
+            ruleText.getStyleClass().add("instruction-text");
+            card.getChildren().add(ruleText);
+
+            instructionsList.getChildren().add(card);
+        }
+
+        root.getChildren().addAll(topBar, title, instructionsList);
         return createStyledScene(root);
     }
 
@@ -210,6 +265,12 @@ public class GuiClient extends Application {
         aiButton.setOnAction(e -> appendLobbyChat("[System] AI mode is not networked in this build."));
 
         modeCard.getChildren().addAll(modeTitle, pvpButton, aiButton);
+
+        Button howToPlayButton = new Button("How To Play");
+        howToPlayButton.getStyleClass().add("primary-button");
+        howToPlayButton.setOnAction(e -> primaryStage.setScene(instructionsScene));
+
+        modeCard.getChildren().add(howToPlayButton);
         left.getChildren().addAll(profileCard, modeCard);
 
         VBox center = new VBox(14);
@@ -716,12 +777,24 @@ public class GuiClient extends Application {
 
                 boolean dark = (row + col) % 2 == 1;
                 square.getStyleClass().removeAll("square-light", "square-dark", "square-selected");
+                square.getStyleClass().removeAll("piece-red", "piece-black", "piece-king");
                 square.getStyleClass().add(dark ? "square-dark" : "square-light");
                 if (row == selectedRow && col == selectedCol) {
                     square.getStyleClass().add("square-selected");
                 }
 
-                square.setText(pieceSymbol(boardState[row][col]));
+                int piece = boardState[row][col];
+                if (piece == -1 || piece == -2) {
+                    square.getStyleClass().add("piece-red");
+                }
+                if (piece == 1 || piece == 2) {
+                    square.getStyleClass().add("piece-black");
+                }
+                if (piece == 2 || piece == -2) {
+                    square.getStyleClass().add("piece-king");
+                }
+
+                square.setText(pieceSymbol(piece));
             }
         }
     }
