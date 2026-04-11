@@ -24,3 +24,17 @@
 ## Submission File
 
 - `HW5_submission_hw5-pure-clean.zip`
+
+## Which Branch To Run
+
+- HW5 alone: use `hw5-pure-submission`.
+- Project 3 / Checkers: use `main` only if your full Checkers files are present and compiling.
+- If `main` does not compile, restore or re-check the Project 3 files before trying to launch it in IntelliJ.
+
+## Simple Launch Checklist
+
+- `cd HW5Server && mvn clean compile`
+- `cd HW5Client && mvn clean compile`
+- `cd HW5Server && mvn exec:java`
+- `cd HW5Client && mvn exec:java`
+- For two-client testing, run the client command twice in separate terminals.
