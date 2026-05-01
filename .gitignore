@@ -1,6 +1,10 @@
 # Maven build output
 **/target/
 
+# Local runtime data
+*.db
+*.log
+
 # IDE metadata
 .idea/
 .vscode/
@@ -10,11 +14,8 @@
 .DS_Store
 Thumbs.db
 
-# Windows zone identifier artifacts from downloads
-*.Zone.Identifier
-
-# Logs
-*.log
-
-# Submission archives
-HW5_submission_*.zip
+# Local helper folders
+.m2repo/
+checkers-shared/
+standalone-client-test/
+standalone-server-test/

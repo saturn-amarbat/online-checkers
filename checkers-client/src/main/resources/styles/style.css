@@ -1,0 +1,384 @@
+.root-dark {
+    -fx-background-color:
+        radial-gradient(center 15% 10%, radius 55%, rgba(0, 210, 211, 0.12), transparent),
+        radial-gradient(center 85% 5%, radius 48%, rgba(255, 71, 129, 0.14), transparent),
+        linear-gradient(to bottom, #24313a 0%, #1e272e 42%, #151c22 100%);
+    -fx-font-family: "Consolas";
+}
+
+.welcome-root {
+    -fx-alignment: center-left;
+}
+
+.welcome-card,
+.chat-panel,
+.hud-block,
+.instruction-card,
+.gameover-card {
+    -fx-background-color:
+        linear-gradient(to bottom, rgba(18, 24, 31, 0.96), rgba(10, 14, 19, 0.95));
+    -fx-background-radius: 26;
+    -fx-border-color: rgba(0, 210, 211, 0.24), rgba(255, 107, 129, 0.12);
+    -fx-border-insets: 0, 1;
+    -fx-border-radius: 26, 25;
+    -fx-border-width: 1.2, 1;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.34), 24, 0.25, 0, 10);
+}
+
+.welcome-card {
+    -fx-padding: 40;
+    -fx-spacing: 14;
+    -fx-max-width: 680;
+}
+
+.scene-caption {
+    -fx-text-fill: #63f4ff;
+    -fx-font-size: 12px;
+    -fx-font-weight: 700;
+}
+
+.scene-title {
+    -fx-text-fill: #f7fbff;
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 28px;
+    -fx-font-weight: 800;
+}
+
+.app-title {
+    -fx-text-fill: linear-gradient(to right, #f8fbff 0%, #70f8ff 48%, #ff71c8 100%);
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 62px;
+    -fx-font-weight: 900;
+    -fx-text-overrun: clip;
+    -fx-effect: dropshadow(gaussian, rgba(0, 210, 211, 0.3), 26, 0.4, 0, 0);
+}
+
+.title-badge-ring {
+    -fx-fill: rgba(0, 0, 0, 0.18);
+    -fx-stroke: linear-gradient(to bottom, #00d8d6 0%, #ef5777 100%);
+    -fx-stroke-width: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 216, 214, 0.32), 24, 0.36, 0, 0);
+}
+
+.title-badge-core {
+    -fx-fill: linear-gradient(to bottom, rgba(15, 21, 28, 0.96), rgba(8, 11, 16, 0.94));
+    -fx-stroke: rgba(255, 255, 255, 0.08);
+    -fx-stroke-width: 1px;
+}
+
+.title-badge-text {
+    -fx-text-fill: linear-gradient(to right, #f8fbff 0%, #70f8ff 48%, #ef5777 100%);
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 28px;
+    -fx-font-weight: 900;
+}
+
+.sub-title,
+.instruction-body,
+.status-text {
+    -fx-text-fill: rgba(236, 240, 241, 0.8);
+    -fx-font-size: 13px;
+    -fx-line-spacing: 2px;
+    -fx-wrap-text: true;
+    -fx-text-overrun: word-ellipsis;
+}
+
+.field-label,
+.panel-title,
+.section-label,
+.instruction-title {
+    -fx-text-fill: #ecf0f1;
+    -fx-font-family: "Arial Black";
+    -fx-font-weight: 800;
+}
+
+.field-label {
+    -fx-font-size: 15px;
+}
+
+.panel-title {
+    -fx-font-size: 16px;
+}
+
+.section-label,
+.instruction-title {
+    -fx-font-size: 14px;
+}
+
+.instruction-card {
+    -fx-padding: 18 20 18 20;
+    -fx-spacing: 6;
+}
+
+.howto-root {
+    -fx-padding: 24;
+}
+
+.howto-scroll,
+.howto-scroll > .viewport {
+    -fx-background-color: transparent;
+}
+
+.input-field,
+.chat-input,
+.chat-area,
+.stats-area {
+    -fx-background-color:
+        linear-gradient(to bottom, rgba(16, 22, 29, 0.96), rgba(10, 13, 19, 0.96));
+    -fx-background-radius: 14;
+    -fx-border-color: rgba(0, 210, 211, 0.34);
+    -fx-border-radius: 14;
+    -fx-border-width: 1.1;
+    -fx-text-fill: #f7fbff;
+    -fx-prompt-text-fill: rgba(236, 240, 241, 0.42);
+    -fx-highlight-fill: rgba(0, 210, 211, 0.48);
+    -fx-highlight-text-fill: white;
+}
+
+.input-field,
+.chat-input {
+    -fx-padding: 13 14 13 14;
+    -fx-font-size: 13px;
+}
+
+.chat-area,
+.stats-area {
+    -fx-font-size: 12px;
+    -fx-font-family: "Consolas";
+}
+
+.chat-area .content,
+.stats-area .content {
+    -fx-background-color: rgba(10, 13, 19, 0.96);
+    -fx-background-radius: 14;
+}
+
+.input-field:focused,
+.chat-input:focused,
+.chat-area:focused,
+.stats-area:focused {
+    -fx-border-color: #00d2d3;
+    -fx-effect: dropshadow(gaussian, rgba(0, 210, 211, 0.22), 16, 0.26, 0, 0);
+}
+
+.primary-button,
+.secondary-button,
+.chat-toggle {
+    -fx-background-radius: 14;
+    -fx-cursor: hand;
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 12px;
+    -fx-font-weight: 800;
+    -fx-padding: 12 18 12 18;
+    -fx-text-overrun: clip;
+}
+
+.primary-button {
+    -fx-background-color: linear-gradient(to right, #00d2d3 0%, #1dd1a1 48%, #ff6b81 100%);
+    -fx-text-fill: #11161d;
+    -fx-effect: dropshadow(gaussian, rgba(0, 210, 211, 0.28), 18, 0.28, 0, 8);
+    -fx-min-width: 132;
+}
+
+.secondary-button {
+    -fx-background-color: rgba(16, 22, 29, 0.86);
+    -fx-text-fill: #f4fbff;
+    -fx-border-color: rgba(255, 107, 129, 0.34);
+    -fx-border-radius: 14;
+    -fx-border-width: 1.1;
+    -fx-min-width: 132;
+}
+
+.primary-button:hover,
+.secondary-button:hover,
+.chat-toggle:hover {
+    -fx-effect: dropshadow(gaussian, rgba(255, 107, 129, 0.22), 18, 0.25, 0, 6);
+}
+
+.chat-toggle {
+    -fx-background-color: rgba(16, 22, 29, 0.86);
+    -fx-text-fill: rgba(236, 240, 241, 0.75);
+    -fx-border-color: rgba(0, 210, 211, 0.22);
+    -fx-border-radius: 14;
+    -fx-border-width: 1;
+}
+
+.chat-toggle:selected {
+    -fx-background-color: linear-gradient(to right, rgba(0, 210, 211, 0.32), rgba(255, 107, 129, 0.28));
+    -fx-text-fill: white;
+    -fx-border-color: #00d2d3;
+}
+
+.chat-toggle:disabled {
+    -fx-opacity: 0.45;
+}
+
+.status-bar {
+    -fx-padding: 0 0 16 0;
+}
+
+.hud-block {
+    -fx-min-width: 170;
+    -fx-pref-width: 170;
+    -fx-max-width: 170;
+    -fx-padding: 14 16 14 16;
+    -fx-spacing: 4;
+}
+
+.queue-card {
+    -fx-min-width: 290;
+    -fx-pref-width: 290;
+    -fx-max-width: 290;
+}
+
+.queue-status {
+    -fx-text-fill: #f8fbff;
+    -fx-font-size: 12px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: 700;
+}
+
+.queue-control-button {
+    -fx-min-width: 128;
+    -fx-pref-width: 128;
+}
+
+.hud-label {
+    -fx-text-fill: rgba(236, 240, 241, 0.64);
+    -fx-font-size: 11px;
+    -fx-font-weight: 700;
+}
+
+.hud-value {
+    -fx-text-fill: #f8fbff;
+    -fx-font-size: 12px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: 700;
+    -fx-wrap-text: true;
+    -fx-text-overrun: word-ellipsis;
+}
+
+.chat-panel {
+    -fx-padding: 20;
+    -fx-spacing: 14;
+}
+
+.board-frame {
+    -fx-background-color:
+        linear-gradient(to bottom right, rgba(236, 240, 241, 0.08), rgba(236, 240, 241, 0.02)),
+        linear-gradient(to bottom, #0c1218 0%, #111920 100%);
+    -fx-background-insets: 0, 7;
+    -fx-background-radius: 28, 22;
+    -fx-border-color: rgba(0, 210, 211, 0.34), rgba(255, 107, 129, 0.2);
+    -fx-border-insets: 0, 6;
+    -fx-border-radius: 28, 22;
+    -fx-border-width: 1.5, 1;
+    -fx-effect:
+        dropshadow(gaussian, rgba(0, 210, 211, 0.18), 28, 0.26, 0, 0),
+        dropshadow(gaussian, rgba(0, 0, 0, 0.46), 34, 0.34, 0, 18);
+}
+
+.board-grid {
+    -fx-background-color: rgba(9, 12, 16, 0.88);
+    -fx-background-radius: 18;
+    -fx-padding: 6;
+}
+
+.light-square,
+.dark-square {
+    -fx-border-width: 0.6px;
+    -fx-border-color: rgba(15, 20, 26, 0.18);
+}
+
+.light-square {
+    -fx-background-color: #ecf0f1;
+}
+
+.dark-square {
+    -fx-background-color: #2c3e50;
+}
+
+.selected-square {
+    -fx-border-color: rgba(255, 107, 129, 0.92);
+    -fx-border-width: 2px;
+    -fx-border-style: solid inside;
+}
+
+.valid-target {
+    -fx-border-color: #00d2d3;
+    -fx-border-width: 2px;
+    -fx-border-style: solid inside;
+    -fx-effect: dropshadow(gaussian, rgba(0, 210, 211, 0.18), 8, 0.2, 0, 0);
+}
+
+.piece-red {
+    -fx-fill: linear-gradient(from 20% 20% to 100% 100%, #ff6b81 0%, #ff4757 58%, #d12d46 100%);
+    -fx-stroke: rgba(255, 245, 248, 0.42);
+    -fx-stroke-width: 1.2;
+    -fx-effect: dropshadow(gaussian, rgba(255, 71, 87, 0.42), 18, 0.32, 0, 6);
+}
+
+.piece-black {
+    -fx-fill: linear-gradient(from 18% 18% to 100% 100%, #57606f 0%, #2f3542 62%, #171a22 100%);
+    -fx-stroke: rgba(236, 240, 241, 0.22);
+    -fx-stroke-width: 1.2;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.52), 18, 0.3, 0, 6);
+}
+
+.piece-shell:hover .piece-red {
+    -fx-effect: dropshadow(gaussian, rgba(239, 87, 119, 0.72), 26, 0.36, 0, 0);
+}
+
+.piece-shell:hover .piece-black {
+    -fx-effect: dropshadow(gaussian, rgba(0, 216, 214, 0.7), 26, 0.36, 0, 0);
+}
+
+.king-ring {
+    -fx-fill: rgba(255, 210, 79, 0.18);
+    -fx-stroke: #f9d66b;
+    -fx-stroke-width: 2px;
+    -fx-effect: dropshadow(gaussian, rgba(249, 214, 107, 0.22), 14, 0.3, 0, 0);
+}
+
+.king-glyph {
+    -fx-fill: linear-gradient(to bottom, #fff4bf 0%, #f8d85a 100%);
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 18px;
+}
+
+.gameover-root {
+    -fx-alignment: center;
+}
+
+.gameover-card {
+    -fx-padding: 28;
+    -fx-spacing: 16;
+}
+
+.winner-neon {
+    -fx-text-fill: linear-gradient(to right, #f8fbff 0%, #70f8ff 45%, #ef5777 100%);
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 40px;
+    -fx-font-weight: 900;
+    -fx-effect: dropshadow(gaussian, rgba(0, 216, 214, 0.32), 24, 0.34, 0, 0);
+}
+
+.versus-mark {
+    -fx-text-fill: rgba(236, 240, 241, 0.92);
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 30px;
+    -fx-font-weight: 900;
+}
+
+.info-text {
+    -fx-text-fill: rgba(236, 240, 241, 0.82);
+}
+
+.error-text {
+    -fx-text-fill: #ff7f96;
+}
+
+.version-tag {
+    -fx-font-size: 12px;
+    -fx-text-fill: rgba(236, 240, 241, 0.55);
+}
